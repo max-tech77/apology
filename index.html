@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>I’m Sorry</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Roboto, system-ui, sans-serif;
+      background: #f2f3f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #1f1f1f;
+    }
+
+    .card {
+      background: #ffffff;
+      width: 92%;
+      max-width: 380px;
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 20px;
+      font-weight: 500;
+      margin-bottom: 12px;
+    }
+
+    .intro {
+      font-size: 14.5px;
+      color: #444;
+      margin-bottom: 20px;
+    }
+
+    button {
+      background: #1a73e8;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 24px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: 0 4px 10px rgba(26,115,232,0.3);
+    }
+
+    button:active {
+      transform: scale(0.97);
+      box-shadow: 0 2px 6px rgba(26,115,232,0.25);
+    }
+
+    .message {
+      margin-top: 20px;
+      font-size: 14.5px;
+      line-height: 1.6;
+      color: #333;
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: opacity 0.8s ease, max-height 0.8s ease;
+      text-align: left;
+    }
+
+    .message.show {
+      opacity: 1;
+      max-height: 500px;
+    }
+
+    .note {
+      margin-top: 18px;
+      font-size: 13px;
+      color: #777;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <h1>I’m Sorry</h1>
+
+    <p class="intro">
+      I wanted to say this properly,  
+      without rushing u.
+    </p>
+
+    <button onclick="showMessage()">Read when you’re ready</button>
+
+    <div class="message" id="msg">
+      <p>
+        I understand now why seeing those old chats hurt you.
+        Even though they were from before we became close frnds,
+        I see how they made u feel, and I’m truly sorry..
+      </p>
+
+      <p>
+        I really valued the trust and closeness we were building,
+        and I regret not being more thoughtful.
+      </p>
+
+      <p>
+        This page isn’t meant to ask anything from you.
+        I just wanted to apologize honestly
+        and respect your feelings.
+      </p>
+
+      <p class="note">
+        Take all the time you need.
+        hope I'll not become 'everyone else..
+      </p>
+    </div>
+  </div>
+
+  <script>
+    function showMessage() {
+      document.getElementById("msg").classList.add("show");
+    }
+  </script>
+</body>
+</html>
